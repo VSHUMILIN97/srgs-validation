@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 	xml:lang="ru-RU"
+			root="ServiceTypes"
+			mode="voice"
+			version="1.0"
+			xmlns="http://www.w3.org/2001/06/grammar"
+			tag-format="semantics/1.0">
+    <rule id="ServiceTypes">
+        <item repeat="0-1"><ruleref uri="#intro"/></item>
+        <one-of>
+            <item><ruleref uri="#simplicity"/></item>
+            <item><ruleref uri="#boiler_plate"/></item>
+            <item><ruleref uri="#recycle"/></item>
+            <item><ruleref uri="#anger"/></item>
+            <item><ruleref uri="#intro"/></item>
+        </one-of>
+        <tag>out = rules.latest()</tag>
+    </rule>
+
+    <rule id="intro">
+        <item repeat="0-2">
+            <one-of>
+                <item>наверное</item>
+                <item>думаю</item>
+                <item>скорее всего</item>
+                <item>это</item>
+                <item>хочу</item>
+                <item>ну</item>
+            </one-of>
+        </item>
+    </rule>
+
+    <rule id="simplicity">
+        <one-of>
+            <item>просто</item>
+            <item>простенько</item>
+            <item>простовато<item repeat="0-1">легко</item></item>
+        </one-of>
+        <tag>out = "SIMPLICITY"</tag>
+    </rule>
+
+    <rule id="boiler_plate">
+        <one-of>
+           <item>Повторять</item>
+        </one-of>
+        <item repeat="0-1">
+            <one-of>
+                <item>код</item>
+            </one-of>
+        </item>
+        <tag>out = "BOILER_PLATE"</tag>
+    </rule>
+
+     <rule id="recycle">
+        <one-of>
+           <item>Переиспользовать</item>
+        </one-of>
+        <item repeat="0-1">
+            <one-of>
+                <item>отходы</item>
+            </one-of>
+        </item>
+        <tag>out = "RECYCLE"</tag>
+    </rule>
+
+    <rule id="anger">
+        <one-of>
+		   <item>злость</item>
+           <item>злоба</item>
+           <item>злюшка<item repeat="0-1">злая</item></item>
+        </one-of>
+        <tag>out = "ANGER"</tag>
+    </rule>
+</grammar>

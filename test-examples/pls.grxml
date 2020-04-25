@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 	xml:lang="ru-RU"
+			root="Dgt"
+			mode="voice"
+			version="1.0"
+			xmlns="http://www.w3.org/2001/06/grammar"
+			tag-format="semantics/1.0">
+
+	<meta name="Author" content="Esakova M"/>
+	<meta name="Version" content="2.1.3"/>
+	<meta name="ChangeDate" content="20180627"/>
+	<meta name="Goal" content="PMOIMPL-3190"/>
+	<meta name="Copyright" content="Speech Technology Center © 2001-2018"/>
+
+        <rule id="Dgt">
+                <tag>out = ""</tag>
+                <item repeat="1-7"><ruleref uri="#digits" />
+            	    <tag>out += rules.digits</tag>
+                </item>
+        </rule>
+
+	<rule id="digits">
+			<one-of>
+			<item>1<tag>out="1"</tag></item>
+			<item>2<tag>out="2"</tag></item>
+			<item>3<tag>out="3"</tag></item>
+			<item>4<tag>out="4"</tag></item>
+			<item>5<tag>out="5"</tag></item>
+			<item>6<tag>out="6"</tag></item>
+			<item>7<tag>out="7"</tag></item>
+			<item>8<tag>out="8"</tag></item>
+			<!--<item>во семь<tag>out="8"</tag></item>-->
+			<item>9<tag>out="9"</tag></item>
+			<item>0<tag>out="0"</tag></item>
+		</one-of>
+
+	</rule>
+	<lexicon xmlns="http://www.w3.org/2005/01/pronunciation-lexicon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
+	alphabet="spb-stc-tts" xml:lang="ru-RU">
+
+	<lexeme>
+            <grapheme>0</grapheme>
+				<phoneme>n u0 l'</phoneme>
+				<phoneme>n o0 l'</phoneme>
+				<phoneme>n o0 e4 l'</phoneme>
+				<phoneme>n o0 a0 l'</phoneme>
+				<phoneme>n o0 a4 l'</phoneme>
+				<phoneme>n u0 u1 l'</phoneme>
+				<phoneme>n u0 o4 l'</phoneme>
+				<phoneme>n u0 y4 l'</phoneme>
+				<phoneme>n u0 a4 l'</phoneme>
+				<phoneme>n a1 o0 l'</phoneme>
+				<!--<phoneme>n o1 -1 o0 l'</phoneme>-->
+				<phoneme>n o1 o0 l'</phoneme>
+				<!--<phoneme>n o0 a4 -1 l'</phoneme>-->
+			<!--	<phoneme>n -1 n o0 l'</phoneme>-->
+				<phoneme>n n o0 l'</phoneme>
+				<phoneme>n a1 a0 l'</phoneme>
+        </lexeme>
+
+        <lexeme>
+            <grapheme>1</grapheme>
+				<phoneme>a1 d' i0 n</phoneme>
+				<phoneme>a1 z' i0 n</phoneme>
+				<phoneme>a1 d' i1 i0 n</phoneme>
+				<phoneme>a1 -1 d' i1 i0 n</phoneme>
+				<phoneme>a1 d i0 n</phoneme>
+				<phoneme>a1 d i1 n</phoneme>
+				<phoneme>a1 d e1 n</phoneme>
+				<phoneme>a1 d y0 n</phoneme>
+				<phoneme>a1 d y1 n</phoneme>
+			<!--	<phoneme>a1 -1 d' i0 n</phoneme>-->
+				<phoneme>a0 -1 d' i0 n</phoneme>
+				<phoneme>a1 d' i0 i0 n</phoneme>
+				<phoneme>a1 d' i0 i4 n</phoneme>
+				<phoneme>a0 d' i0 i0 n</phoneme>
+				<phoneme>a0 d' i0 i4 n</phoneme>
+			<!--	<phoneme>a1 -1 d' i0 i0 n</phoneme>
+				<phoneme>a1 -1 d' i0 i4 n</phoneme>
+				<phoneme>a0 -1 d' i0 i0 n</phoneme>
+				<phoneme>a0 -1 d' i0 i4 n</phoneme>-->
+				<phoneme>a1 a2 d' i1 i0 n</phoneme>
+				<phoneme>a0 d' i4 n</phoneme>
+        </lexeme>
+		  <lexeme>
+            <grapheme>2</grapheme>
+				<phoneme>d v a0</phoneme>
+				<phoneme>d v a1</phoneme>
+				<phoneme>d v a0 a4</phoneme>
+				<phoneme>t v a0</phoneme>
+
+				<phoneme>d v a0 -1 a0</phoneme>
+				<phoneme>d v a0 -1 a4</phoneme>
+				<phoneme>d v a0 a0</phoneme>
+        </lexeme>
+		<lexeme>
+            <grapheme>3</grapheme>
+			<phoneme>t r' i0</phoneme>
+<!--			<phoneme>t r' i1</phoneme>
+			<phoneme>t r' i0 i4</phoneme>
+			<phoneme>t r' i0 i1</phoneme>
+			<phoneme>t r i0</phoneme>
+			<phoneme>t r i0 i1</phoneme>
+			<phoneme>t -1 r' i0</phoneme>
+			<phoneme>t r y0</phoneme>-->
+
+		</lexeme>
+		 <lexeme>
+            <grapheme>4</grapheme>
+				<phoneme>ch i1 t y0 r' i4</phoneme>
+				<phoneme>sc i1 t y0 r' i4</phoneme>
+				<phoneme>ch e0 -1 t y0 r' i4</phoneme>
+				<phoneme>ch e0 t y0 r' i4</phoneme>
+				<phoneme>ch o0 -1 t y0 r' i4</phoneme>
+				<phoneme>ch o0 t y0 r' i4</phoneme>
+				<phoneme>ch e0 -1 t y1 y0 r' i4</phoneme>
+				<phoneme>ch e0 t y1 y0 r' i4</phoneme>
+				<phoneme>ch o0 -1 t y1 y0 r' i4</phoneme>
+				<phoneme>ch o0 t y1 y0 r' i4</phoneme>
+				<phoneme>ch i1 e0 -1 t y1 y0 r' i4</phoneme>
+				<phoneme>ch i1 e0 t y1 y0 r' i4</phoneme>
+				<phoneme>ch i1 t y0 y1 r' i4</phoneme>
+				<phoneme>sc i1 t y0 y1 r' i4</phoneme>
+				<phoneme>ch i1 -1 t y0 r' i4</phoneme>
+				<phoneme>sc i1 -1 t y0 r' i4</phoneme>
+				<phoneme>ch i1 -1 t y0 y1 r' i4</phoneme>
+				<phoneme>sc i1 -1 t y0 y1 r' i4</phoneme>
+				<phoneme>ch i1 -1 t y0 r' y0</phoneme>
+				<phoneme>sc i1 -1 t y0 r' y0</phoneme>
+				<phoneme>ch i1 -1 t y0 y1 r' y0</phoneme>
+				<phoneme>sc i1 -1 t y0 y1 r' y0</phoneme>
+				<phoneme>ch e0 -1 t y0 y1 r' i4</phoneme>
+				<phoneme>sc e0 -1 t y0 r' i4</phoneme>
+				<phoneme>sc e0 -1 t y0 y1 r' i4</phoneme>
+				<phoneme>ch e0 -1 t y0 r' y0</phoneme>
+				<phoneme>ch e0 -1 t y0 y1 r' y0</phoneme>
+				<phoneme>sc e0 -1 t y0 r' y0</phoneme>
+				<phoneme>sc e0 -1 t y0 y1 r' y0</phoneme>
+				<phoneme>ch e0 t y0 y1 r' i4</phoneme>
+				<phoneme>sc e0 t y0 r' i4</phoneme>
+				<phoneme>sc e0 t y0 y1 r' i4</phoneme>
+				<phoneme>ch e0 t y0 r' y0</phoneme>
+				<phoneme>sh e0 t y0 r' y0</phoneme>
+				<phoneme>ch a4 -1 t y0 r' i4</phoneme>
+				<phoneme>ch a4 t y0 r' i4</phoneme>
+				<phoneme>sc a4 -1 t y0 r' i4</phoneme>
+				<phoneme>sc a4 t y0 r' i4</phoneme>
+				<phoneme>ch a4 -1 t y0 r' y0</phoneme>
+				<phoneme>sc a4 -1 t y0 r' y0</phoneme>
+				<phoneme>ch i0 t y0 -1 r i0</phoneme>
+				<phoneme>sc i0 t y0 -1 r i0</phoneme>
+				<phoneme>ch i0 t y0 -1 r y0</phoneme>
+				<phoneme>sc i0 t y0 -1 r y0</phoneme>
+				<phoneme>ch i0 -1 t y0 -1 r e0</phoneme>
+				<phoneme>ch i0 -1 t y0 -1 r i0</phoneme>
+				<phoneme>sc i0 -1 t y0 -1 r i0</phoneme>
+				<phoneme>ch i0 -1 t y0 -1 r y0</phoneme>
+				<phoneme>sc i0 -1 t y0 -1 r y0</phoneme>
+				<phoneme>ch i0 -1 t y0 r e0</phoneme>
+				<phoneme>ch i0 -1 t y0 r i0</phoneme>
+				<phoneme>ch i0 -1 t y0 r i4</phoneme>
+				<phoneme>ch i0 -1 t y0 -1 r i4</phoneme>
+				<phoneme>ch i0 t y0 -1 r e0</phoneme>
+				<phoneme>ch i0 t y0 -1 r i4</phoneme>
+				<phoneme>ch i0 t y0 r e0</phoneme>
+				<phoneme>ch i0 t y0 r i4</phoneme>
+				<phoneme>ch i0 t y0 r i0</phoneme>
+				<phoneme>sc i0 t y0 r e0</phoneme>
+				<phoneme>ch i0 t y0 r y0</phoneme>
+				<phoneme>sc i0 t y0 r y0</phoneme>
+				<phoneme>sc i0 t y0 r i4</phoneme>
+				<phoneme>sc i0 t y0 r i0</phoneme>
+				<phoneme>ch t y0 r' i4</phoneme>
+				<phoneme>sc t y0 r' i4</phoneme>
+				<phoneme>ch t y0 r' i0</phoneme>
+				<phoneme>sc t y0 r' i0</phoneme>
+				<phoneme>ch t y0 r' y0</phoneme>
+				<phoneme>sc t y0 r' y0</phoneme>
+			<!--	<phoneme>ch e0 t r' a4</phoneme>
+				<phoneme>ch e0 t r' i4</phoneme>
+				<phoneme>ch e0 -1 t r' i0</phoneme>
+				<phoneme>ch e0 t r' i0</phoneme>
+				<phoneme>ch i0 t r' a4</phoneme>
+				<phoneme>ch i0 t r' i4</phoneme>
+				<phoneme>ch i0 -1 t r' i0</phoneme>
+				<phoneme>ch i0 t r' i0</phoneme>
+				<phoneme>ch t y0 r' a4</phoneme>
+				<phoneme>sc t y0 r' a4</phoneme>
+				<phoneme>ch i0 t r y0</phoneme>
+				<phoneme>ch e0 t r y0</phoneme>-->
+        </lexeme>
+		<lexeme>
+            <grapheme>5</grapheme>
+				<phoneme>p' a0 t'</phoneme>
+				<phoneme>p' i1 a0 t'</phoneme>
+				<!--<phoneme>p' a0 -1 a0 t'</phoneme>-->
+				<phoneme>p' a0 a0 t'</phoneme>
+				<phoneme>p' a2 t'</phoneme>
+				<phoneme>p' a4 t'</phoneme>
+				<phoneme>p' a0 y0 t'</phoneme>
+			<!--	<phoneme>p a0 t'</phoneme>-->
+			<!--	<phoneme>p t'</phoneme>-->
+        </lexeme>
+		<lexeme>
+            <grapheme>6</grapheme>
+				<phoneme>sh e0 s' t'</phoneme>
+				<phoneme>sh i4 s' t'</phoneme>
+				<phoneme>s sh e0 s' t'</phoneme>
+				<phoneme>s sh e1 s t'</phoneme>
+				<phoneme>sh e0 e1 s' t'</phoneme>
+				<phoneme>sh y1 e0 s' t'</phoneme>
+				<!--<phoneme>sh e0 -1 e0 s' t'</phoneme>-->
+				<phoneme>sh e0 e0 s' t'</phoneme>
+        </lexeme>
+
+	 	<lexeme>
+          <grapheme>7</grapheme>
+				<phoneme>s' e0 m'</phoneme>
+				<phoneme>s' e0 m</phoneme>
+				<!--<phoneme>s' e0 e4 m</phoneme>
+				<phoneme>s' e0 i1 m</phoneme>
+				<phoneme>s' e0 i4 m</phoneme>
+				<phoneme>s' e0 i0 m</phoneme>
+				<phoneme>s' e0 e4 m'</phoneme>
+				<phoneme>s' e0 i1 m'</phoneme>
+				<phoneme>s' e0 i4 m'</phoneme>
+				<phoneme>s' e0 i0 m'</phoneme>
+				<phoneme>s s' e0 m'</phoneme>
+				<phoneme>s s' e0 m</phoneme>
+				<phoneme>s' i1 e0 m'</phoneme>
+				<phoneme>s' e0 -1 e0 m'</phoneme>
+				<phoneme>s' e0 e0 m'</phoneme>
+				<phoneme>s' o0 -1 e0 m'</phoneme>
+				<phoneme>s' o0 e0 m'</phoneme>
+				<phoneme>s' e0 -1 m'</phoneme>
+				<phoneme>s' e0 -1 j e0 m'</phoneme>
+				<phoneme>s' e0 j e0 m'</phoneme>
+				<phoneme>s' o0 m</phoneme>
+				<phoneme>s' i1 e0 m</phoneme>-->
+        </lexeme>
+	  <lexeme>
+            <grapheme>8</grapheme>
+				<phoneme>v a1 -1 s' e0 m</phoneme>
+				<phoneme>v a1 -1 s' e0 m'</phoneme>
+				<phoneme>v a1 s' e0 m</phoneme>
+				<phoneme>v a1 s' e0 m'</phoneme>
+				<phoneme>v a2 -1 s' i1 e0 m'</phoneme>
+				<phoneme>v a2 s' i1 e0 m'</phoneme>
+				<phoneme>v o0 a4 -1 s' e0 m</phoneme>
+				<phoneme>v o0 a4 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 a4 s' e0 m</phoneme>
+				<phoneme>v o0 a4 s' e0 m'</phoneme>
+				<phoneme>v o0 a4 -1 s' i1 e0 m'</phoneme>
+				<phoneme>v o0 a4 s' i1 e0 m'</phoneme>
+				<phoneme>v a2 a1 s' e0 m'</phoneme>
+				<phoneme>v a2 a2 s' i1 e0 m'</phoneme>
+				<phoneme>v o0 -1 s e0 e4 m</phoneme>
+				<phoneme>v o0 -1 s e0 e4 m'</phoneme>
+				<phoneme>v o0 -1 s e0 i0 m'</phoneme>
+				<phoneme>v o0 -1 s e0 i1 m</phoneme>
+				<phoneme>v o0 -1 s e0 i1 m'</phoneme>
+				<phoneme>v o0 -1 s e0 i4 m</phoneme>
+				<phoneme>v o0 -1 s e0 i4 m'</phoneme>
+				<phoneme>v o0 -1 s e0 m</phoneme>
+				<phoneme>v o0 -1 s e0 m'</phoneme>
+				<phoneme>v o0 -1 s' e0 m</phoneme>
+				<phoneme>v o0 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 -1 s i0 m</phoneme>
+				<phoneme>v o0 -1 s i0 m'</phoneme>
+				<phoneme>v o0 -1 s' i0 m</phoneme>
+				<phoneme>v o0 -1 s' i0 m'</phoneme>
+				<phoneme>v o0 -1 s i4 m</phoneme>
+				<phoneme>v o0 -1 s i4 m'</phoneme>
+				<phoneme>v o0 -1 s' i4 m</phoneme>
+				<phoneme>v o0 -1 s' i4 m'</phoneme>
+				<phoneme>v o0 -1 s u1 m'</phoneme>
+				<phoneme>v o0 a0 s e0 m</phoneme>
+				<phoneme>v o0 a0 s e0 m'</phoneme>
+				<phoneme>v o0 a0 s' e0 m</phoneme>
+				<phoneme>v o0 a0 s' e0 m'</phoneme>
+				<phoneme>v o0 a1 -1 s' e0 m</phoneme>
+				<phoneme>v o0 a1 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 a1 s' e0 m</phoneme>
+				<phoneme>v o0 a1 s' e0 m'</phoneme>
+				<phoneme>v o0 a1 s e1 m'</phoneme>
+				<phoneme>v o0 a1 s' e1 m'</phoneme>
+				<phoneme>v o0 a4 -1 s e0 i4 m'</phoneme>
+				<phoneme>v o0 a4 -1 s' e0 i4 m'</phoneme>
+				<phoneme>v o0 a4 -1 s e0 m</phoneme>
+				<phoneme>v o0 a4 s e0 i4 m'</phoneme>
+				<phoneme>v o0 a4 s' e0 i4 m'</phoneme>
+				<phoneme>v o0 a4 s e0 m</phoneme>
+				<phoneme>v o0 o0 s e0 m</phoneme>
+				<phoneme>v o0 o0 s' e0 m</phoneme>
+				<phoneme>v o0 o0 s' e0 m'</phoneme>
+				<phoneme>v o0 o0 s s' e0 m</phoneme>
+				<phoneme>v o0 o0 s s' e0 m'</phoneme>
+				<phoneme>v o0 o4 s' e0 m</phoneme>
+				<phoneme>v o0 o4 s' e0 m'</phoneme>
+				<phoneme>v o0 o4 s' i0 m</phoneme>
+				<phoneme>v o0 o4 s' i0 m'</phoneme>
+				<phoneme>v o0 o4 s' i4 m</phoneme>
+				<phoneme>v o0 o4 s' i4 m'</phoneme>
+				<phoneme>v o0 o4 s s' e0 m</phoneme>
+				<phoneme>v o0 o4 s s' e0 m'</phoneme>
+				<phoneme>v o0 o4 s s' i4 m</phoneme>
+				<phoneme>v o0 o4 s s' i4 m'</phoneme>
+				<phoneme>v o0 s e0 e0 m</phoneme>
+				<phoneme>v o0 s' e0 e0 m</phoneme>
+				<phoneme>v o0 s' e0 e0 m'</phoneme>
+				<phoneme>v o0 s' e0 e1 m</phoneme>
+				<phoneme>v o0 s' e0 e1 m'</phoneme>
+				<phoneme>v o0 s e0 e4 m</phoneme>
+				<phoneme>v o0 s e0 e4 m'</phoneme>
+				<phoneme>v o0 s' e0 e4 m</phoneme>
+				<phoneme>v o0 s' e0 e4 m'</phoneme>
+				<phoneme>v o0 s e0 i0 m</phoneme>
+				<phoneme>v o0 s e0 i0 m'</phoneme>
+				<phoneme>v o0 s' e0 i0 m</phoneme>
+				<phoneme>v o0 s' e0 i0 m'</phoneme>
+				<phoneme>v o0 s e0 i1 m</phoneme>
+				<phoneme>v o0 s e0 i1 m'</phoneme>
+				<phoneme>v o0 s' e0 i1 m</phoneme>
+				<phoneme>v o0 s' e0 i1 m'</phoneme>
+				<phoneme>v o0 s e0 i4 m</phoneme>
+				<phoneme>v o0 s e0 i4 m'</phoneme>
+				<phoneme>v o0 s' e0 i4 m</phoneme>
+				<phoneme>v o0 s' e0 i4 m'</phoneme>
+				<phoneme>v o0 s e0 m</phoneme>
+				<phoneme>v o0 s' e0 m</phoneme>
+				<phoneme>v o0 s' e0 m'</phoneme>
+				<phoneme>v o0 s i0 m</phoneme>
+				<phoneme>v o0 s i0 m'</phoneme>
+				<phoneme>v o0 s' i0 m</phoneme>
+				<phoneme>v o0 s' i0 m'</phoneme>
+				<phoneme>v o0 s' i1 m</phoneme>
+				<phoneme>v o0 s' i1 m'</phoneme>
+				<phoneme>v o0 s i4 m</phoneme>
+				<phoneme>v o0 s i4 m'</phoneme>
+				<phoneme>v o0 s' i4 m</phoneme>
+				<phoneme>v o0 s' i4 m'</phoneme>
+				<phoneme>v o0 a1 s' e0 i1 m</phoneme>
+				<phoneme>v o0 o0 -1 s e0 m</phoneme>
+				<phoneme>v o0 o0 -1 s' e0 m</phoneme>
+				<phoneme>v o0 o0 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 o0 -1 s s' e0 m</phoneme>
+				<phoneme>v o0 o0 -1 s s' e0 m'</phoneme>
+				<phoneme>v o0 o4 -1 s' e0 m</phoneme>
+				<phoneme>v o0 o4 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 o4 -1 s' i0 m</phoneme>
+				<phoneme>v o0 o4 -1 s' i0 m'</phoneme>
+				<phoneme>v o0 o4 -1 s' i4 m</phoneme>
+				<phoneme>v o0 o4 -1 s' i4 m'</phoneme>
+				<phoneme>v o0 o4 -1 s s' e0 m</phoneme>
+				<phoneme>v o0 o4 -1 s s' e0 m'</phoneme>
+				<phoneme>v o0 o4 -1 s s' i4 m</phoneme>
+				<phoneme>v o0 o4 -1 s s' i4 m'</phoneme>
+				<phoneme>v o0 s' i4 -1 m'</phoneme>
+				<phoneme>v o0 s' a4 -1 j e0 m'</phoneme>
+				<phoneme>v o0 s' a4 j e0 m'</phoneme>
+				<phoneme>v o0 s' i4 -1 j e0 m'</phoneme>
+				<phoneme>v o0 s' i4 j e0 m'</phoneme>
+				<phoneme>v a1 -1 s' e0 -1 j e0 m'</phoneme>
+				<phoneme>v a1 -1 s' e0 j e0 m'</phoneme>
+				<phoneme>v a1 s' e0 -1 j e0 m'</phoneme>
+				<phoneme>v a1 s' e0 j e0 m'</phoneme>
+				<phoneme>v a1 -1 s' e0 -1 e0 m'</phoneme>
+				<phoneme>v a1 -1 s' e0 e0 m'</phoneme>
+				<phoneme>v a1 s' o0 m</phoneme>
+				<phoneme>v a1 s e0 m'</phoneme>
+				<phoneme>v a1 s e0 m</phoneme>
+				<phoneme>v a0 s' e0 m'</phoneme>
+				<phoneme>v a0 -1 s' e0 m'</phoneme>
+				<phoneme>v o0 s s' e0 m'</phoneme>
+				<phoneme>v o0 s -1 s' e0 m'</phoneme>
+
+        </lexeme>
+		<lexeme>
+            <grapheme>9</grapheme>
+				<phoneme>d' e0 v' i4 t'</phoneme>
+				<phoneme>d' i1 e0 -1 v' a0 t'</phoneme>
+				<phoneme>d' i1 e0 v' a0 t'</phoneme>
+				<phoneme>d e0 -1 v' a0 t'</phoneme>
+				<phoneme>d e0 v' a0 t'</phoneme>
+				<phoneme>d' i1 e0 -1 v' i1 a0 t'</phoneme>
+				<phoneme>d' i1 e0 v' i1 a0 t'</phoneme>
+				<phoneme>d' i1 i1 v' i1 a0 t'</phoneme>
+				<phoneme>d' e0 v' a4 t'</phoneme>
+				<phoneme>d' e0 -1 v' a2 t'</phoneme>
+				<phoneme>d' e0 -1 v' i1 t'</phoneme>
+				<phoneme>d' e0 -1 d' e0 v' i4 t'</phoneme>
+				<phoneme>d' e0 -1 d' e0 v' a4 t'</phoneme>
+				<phoneme>d' e0 -1 d' e0 -1 v' a2 t'</phoneme>
+				<phoneme>d' e0 -1 d' e0 -1 v' i1 t'</phoneme>
+				<phoneme>d' i1 v' a2 t'</phoneme>
+				<phoneme>d i1 v' e0 t'</phoneme>
+				<phoneme>d e0 v' i0 t'</phoneme>
+				<phoneme>d e0 v' e0 t'</phoneme>
+				<phoneme>d e0 v' i4 t'</phoneme>
+				<phoneme>d e0 v' a1 t'</phoneme>
+				<phoneme>d e0 v' a4 t'</phoneme>
+				<phoneme>d e0 v' y1 t'</phoneme>
+				<phoneme>d i0 v' a4 t'</phoneme>
+				<phoneme>d i0 v' a2 t'</phoneme>
+				<phoneme>d i0 v' a1 t'</phoneme>
+				<phoneme>d i0 v' e0 t'</phoneme>
+				<phoneme>d i0 v' i4 t'</phoneme>
+				<phoneme>d' e0 -1 v' a0 t'</phoneme>
+				<phoneme>d' e0 -1 v' a1 t'</phoneme>
+				<phoneme>d' e0 -1 v' a4 t'</phoneme>
+				<phoneme>d' e0 -1 v' i0 t'</phoneme>
+				<phoneme>d' i0 -1 v' i4 t'</phoneme>
+				<phoneme>d' i1 v' e0 t'</phoneme>
+				<phoneme>d' i1 v' i1 j a0 t'</phoneme>
+				<phoneme>d e0 v' e0 t'</phoneme>
+				<phoneme>d e0 -1 v' i0 t'</phoneme>
+				<phoneme>d e0 v' i0 t'</phoneme>
+				<phoneme>d' i1 v' a0 t'</phoneme>
+				<phoneme>d' i1 v a0 t'</phoneme>
+				<!--<phoneme>d' e0 f t'</phoneme>-->
+				<phoneme>d' i1 v' i0 t'</phoneme>
+				<!--<phoneme>d' i0 f t'</phoneme>-->
+
+         </lexeme>
+    </lexicon>
+
+
+</grammar>

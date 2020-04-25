@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 	xml:lang="ru-RU"
+			root="Settlements"
+			mode="voice"
+			version="1.0"
+			xmlns="http://www.w3.org/2001/06/grammar"
+			tag-format="semantics/1.0">
+
+    <rule id="Settlements" joker="but with poker inside">
+		<one-of>
+			<item>северный регион</item>
+			<item>южный регион</item>
+			<item>западный регион</item>
+			<item>восточный регион</item>
+        </one-of>
+	</rule>
+</grammar>

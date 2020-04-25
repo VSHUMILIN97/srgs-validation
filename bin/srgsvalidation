@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+# coding=utf-8
+from grammarvalidation.validate_grammars_xsd import validate_srgs_xml_file
+
+
+if __name__ == '__main__':
+    code = validate_srgs_xml_file()
+    # Graceful exit
+    exit(code)
