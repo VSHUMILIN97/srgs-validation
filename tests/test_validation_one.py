@@ -41,7 +41,6 @@ def test_inspect_encoding_result_in_bad_encoding(testdir):
     assert res[0] is False
 
 
-@pytest.mark.skip(reason='No work-around for oel (yet)')
 def test_unable_to_get_file_descriptor(testdir):
     """ Checks: Stop task with error if file descriptor is not gettable """
     locked_file = os.path.join(testdir, 'lock')
