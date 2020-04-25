@@ -21,5 +21,5 @@ setup(
     license='MIT',
     author='Vadim Shumilin',
     author_email='vshumilin1488@gmail.com',
-    description='Библиотека и утилита для проверки SRGS грамматик'
+    description='SRGS validation util'
 )
