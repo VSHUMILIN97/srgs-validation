@@ -11,7 +11,7 @@ setup(
     install_requires=[
         'click==7.0',
         'colorama==0.4.3',
-        'lxml==4.3.1',
+        'lxml==4.6.2',
         'six==1.12.0',
         'typing==3.6.6',
         'cchardet==2.1.5'
